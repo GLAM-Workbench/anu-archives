@@ -1,0 +1,32 @@
+name: docker-push
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  Create-Docker-image:
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout files in repo
+      uses: actions/checkout@v2
+
+    - name: update jupyter dependencies with repo2docker
+      uses: jupyterhub/repo2docker-action@master
+      with:
+        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+        BINDER_CACHE: true
+        PUBLIC_REGISTRY_CHECK: true
+
+    - name: Modify readme for DockerHub
+      run: |
+        sed -i -r 's/\[(.*)\]\(.*\.ipynb\)/\1/' README.md
+        sed -i '/^<\!-- START RUN INFO/,/^<\!-- END RUN INFO/d;' README.md
+
+    - name: update Docker Hub description
+      uses: peter-evans/dockerhub-description@v2
+      with:
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_PASSWORD }}
+        repository: wragge/trove-newspaper-harvester
