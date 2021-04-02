@@ -2,3 +2,5 @@
 *.pyc
 .DS_Store
 Untitled*
+list_imports.py
+write_requirements.sh
