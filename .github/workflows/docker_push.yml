@@ -18,6 +18,7 @@ jobs:
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
         BINDER_CACHE: true
         PUBLIC_REGISTRY_CHECK: true
+        IMAGE_NAME: glamworkbench/anu-archives
 
     - name: Modify readme for DockerHub
       run: |
@@ -29,4 +30,4 @@ jobs:
       with:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKERHUB_PASSWORD }}
-        repository: wragge/trove-newspaper-harvester
+        repository: glamworkbench/anu-archives
