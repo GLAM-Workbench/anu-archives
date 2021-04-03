@@ -1,0 +1,44 @@
+{
+    "language": "eng",
+    "license": "MIT",
+    "title": "GLAM-Workbench/anu-archives",
+    "related_identifiers": [
+        {
+            "scheme": "url",
+            "identifier": "https://github.com/GLAM-Workbench/anu-archives/tree/v1.0.0",
+            "relation": "isDerivedFrom",
+            "resource_type": "software"
+        },
+        {
+            "scheme": "url",
+            "identifier": "https://glam-workbench.github.io/anu-archives/",
+            "relation": "isDocumentedBy",
+            "resource_type": "publication-softwaredocumentation"
+        },
+        {
+            "scheme": "url",
+            "identifier": "https://glam-workbench.github.io/",
+            "relation": "isPartOf",
+            "resource_type": "other"
+        }
+    ],
+    "version": "v1.0.0",
+    "upload_type": "software",
+    "keywords": [
+        "ANU Archives",
+        "Sydney Stock Exchange",
+        "archives",
+        "Jupyter",
+        "GLAM Workbench"
+    ],
+    "publication_date": "2021-04-03",
+    "creators": [
+        {
+            "orcid": "0000-0001-7956-4498",
+            "name": "Sherratt, Tim"
+        }
+    ],
+    "access_right": "open",
+    "description": "<p>This repository contains Jupyter notebooks that help you work with data from the ANU Archives. The notebooks currently focus on the <a href=\"http://archivescollection.anu.edu.au/index.php/or59j\">Sydney Stock exchange stock and share lists</a>.</p>"
+
+}
