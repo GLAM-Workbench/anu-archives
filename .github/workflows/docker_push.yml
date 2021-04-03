@@ -11,12 +11,11 @@ jobs:
     - name: checkout files in repo
       uses: actions/checkout@v2
 
-    - name: Modify readme for DockerHub
+    - name: Create index.md from README
       run: |
-        sed -r 's/\[(.*)\]\(.*\.ipynb\)/\1/' README.md > index.md
-        sed -i '/^<\!-- START RUN INFO/,/^<\!-- END RUN INFO/d;' index.md
+        sed '/^<\!-- START RUN INFO/,/^<\!-- END RUN INFO/d;' README.md > index.md
 
-    - name: Add & Commit
+    - name: Commit index.md
       uses: EndBug/add-and-commit@v7.1.0
       with:
           add: index.md
@@ -30,7 +29,11 @@ jobs:
         PUBLIC_REGISTRY_CHECK: true
         IMAGE_NAME: glamworkbench/anu-archives
 
-    - name: update Docker Hub description
+    - name: Modify readme for DockerHub
+      run: |
+        sed -i -r 's/\[(.*)\]\(.*\.ipynb\)/\1/' index.md
+
+    - name: Update Docker Hub description
       uses: peter-evans/dockerhub-description@v2
       with:
         username: ${{ secrets.DOCKER_USERNAME }}
