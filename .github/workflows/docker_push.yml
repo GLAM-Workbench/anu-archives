@@ -11,6 +11,16 @@ jobs:
     - name: checkout files in repo
       uses: actions/checkout@v2
 
+    - name: Modify readme for DockerHub
+      run: |
+        sed -r 's/\[(.*)\]\(.*\.ipynb\)/\1/' README.md > index.md
+        sed -i '/^<\!-- START RUN INFO/,/^<\!-- END RUN INFO/d;' index.md
+
+    - name: Add & Commit
+      uses: EndBug/add-and-commit@v7.1.0
+      with:
+          add: index.md
+
     - name: update jupyter dependencies with repo2docker
       uses: jupyterhub/repo2docker-action@master
       with:
@@ -20,11 +30,6 @@ jobs:
         PUBLIC_REGISTRY_CHECK: true
         IMAGE_NAME: glamworkbench/anu-archives
 
-    - name: Modify readme for DockerHub
-      run: |
-        sed -r 's/\[(.*)\]\(.*\.ipynb\)/\1/' README.md > index.md
-        sed -i '/^<\!-- START RUN INFO/,/^<\!-- END RUN INFO/d;' index.md
-
     - name: update Docker Hub description
       uses: peter-evans/dockerhub-description@v2
       with:
@@ -32,11 +37,3 @@ jobs:
         password: ${{ secrets.DOCKERHUB_PASSWORD }}
         repository: glamworkbench/anu-archives
         readme-filepath: index.md
-
-    - name: Add & Commit
-      uses: EndBug/add-and-commit@v7.1.0
-      with:
-          author_name: 'github-actions[bot]'
-          author_email: 'github-actions[bot]@users.noreply.github.com'
-          add: index.md
-          message: 'Update from README'
