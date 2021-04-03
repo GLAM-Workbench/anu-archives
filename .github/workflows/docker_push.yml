@@ -36,7 +36,7 @@ jobs:
     - name: Add & Commit
       uses: EndBug/add-and-commit@v7.1.0
       with:
-          author_name: wragge
-          author_email: tim@discontents.com.au
+          author_name: 'github-actions[bot]'
+          author_email: 'github-actions[bot]@users.noreply.github.com'
           add: index.md
           message: 'Update from README'
