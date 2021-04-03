@@ -12,11 +12,11 @@ See the [GLAM Workbench for more details](https://glam-workbench.github.io/anu-a
 
 ## Notebooks
 
-* Summary information about volumes – collates links and metadata relating to the 199 bound volumes in the Sydney Stock Exchange collection.
-* Calendar view of the complete collection – helps you see the number of stock and share sheets in the bound volumes from the Sydney Stock Exchange for each day from 1901 to 1950.
-* Display information about a single day's trading – select a date and this notebook will display information about any sheets that are available from this day. It notes where pages seem to be missing, and loads images of the pages for examination.
-* Display details of pages within a date range – select a date range and this notebook will display information about available sheets from all the days within the range.
-* Visualise page data – explores the aggregated page metadata from all 199 volumes.
+* [Summary information about volumes](stock-exchange-details-by-volume.ipynb) – collates links and metadata relating to the 199 bound volumes in the Sydney Stock Exchange collection.
+* [Calendar view of the complete collection](stock-exchange-pages-calendar.ipynb) – helps you see the number of stock and share sheets in the bound volumes from the Sydney Stock Exchange for each day from 1901 to 1950.
+* [Display information about a single day's trading](view-pages-by-date.ipynb) – select a date and this notebook will display information about any sheets that are available from this day. It notes where pages seem to be missing, and loads images of the pages for examination.
+* [Display details of pages within a date range](view-pages-by-date-range.ipynb) – select a date range and this notebook will display information about available sheets from all the days within the range.
+* [Visualise page data](pages_viz.ipynb) – explores the aggregated page metadata from all 199 volumes.
 
 If you haven't used Jupyter notebooks before, you might want to try the Getting Started notebook. It introduces some basic concepts using data from the National Museum of Australia.
 
