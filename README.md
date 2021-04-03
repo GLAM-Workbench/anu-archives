@@ -89,9 +89,9 @@ See the GLAM Workbench for more details.
 
 ## Cite as
 
-See the GLAM Workbench or [Zenodo](https://doi.org/10.5281/zenodo.3545044) for up-to-date citation details.
+See the GLAM Workbench or [Zenodo](https://doi.org/10.5281/zenodo.4660982) for up-to-date citation details.
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3545044.svg)](https://doi.org/10.5281/zenodo.3545044)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4660982.svg)](https://doi.org/10.5281/zenodo.4660982)
 
 ----
 
