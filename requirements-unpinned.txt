@@ -1,9 +1,0 @@
-jupyterlab
-voila
-voila-material @ git+https://github.com/GLAM-Workbench/voila-material.git
-beautifulsoup4
-ipywidgets
-pandas
-requests
-altair
-arrow
