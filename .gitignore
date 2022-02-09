@@ -4,3 +4,5 @@
 Untitled*
 list_imports.py
 write_requirements.sh
+test_and_lint.sh
+update_version.sh
