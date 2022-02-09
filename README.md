@@ -1,5 +1,7 @@
 # ANU Archives
 
+Current version: [v1.1.0](https://github.com/GLAM-Workbench/anu-archives/releases/tag/v1.1.0)
+
 This repository contains Jupyter notebooks that help you work with data from the ANU Archives. The notebooks currently focus on the [Sydney Stock exchange stock and share lists](http://archivescollection.anu.edu.au/index.php/or59j). As the content note indicates:
 
 > These are large format bound volumes of the official lists that were posted up for the public to see - 3 times a day - forenoon, noon and afternoon - at the close of the trading session in the call room at the Sydney Stock Exchange. The closing prices of stocks and shares were entered in by hand on pre-printed sheets.
@@ -17,8 +19,8 @@ See the [GLAM Workbench for more details](https://glam-workbench.github.io/anu-a
 * [Display information about a single day's trading](view-pages-by-date.ipynb) – select a date and this notebook will display information about any sheets that are available from this day. It notes where pages seem to be missing, and loads images of the pages for examination.
 * [Display details of pages within a date range](view-pages-by-date-range.ipynb) – select a date range and this notebook will display information about available sheets from all the days within the range.
 * [Visualise page data](pages_viz.ipynb) – explores the aggregated page metadata from all 199 volumes.
+* [Visualise activity](visualise_activity.ipynb) – visualises the amount of activity each day of trading by looking at the proportion of stocks that have prices recorded against them.
 
-If you haven't used Jupyter notebooks before, you might want to try the Getting Started notebook. It introduces some basic concepts using data from the National Museum of Australia.
 
 ## Data files
 
@@ -26,7 +28,7 @@ If you haven't used Jupyter notebooks before, you might want to try the Getting 
 * [CSV-formatted list of all dates](https://github.com/GLAM-Workbench/anu-archives/blob/master/complete_date_list.csv) within the period of the volumes. Includes the number of pages available for each date, and the number of pages expected (the number of pages produced each day changes across the collection). On dates with no pages, the `reason` field is used to record details of holidays or other interruptions to trading (some with links to Trove).
 * [CSV-formatted list of holidays](https://github.com/GLAM-Workbench/anu-archives/blob/master/nsw_holidays_1900_1950.csv) in NSW from 1901 to 1950.
 * Full data about missing, misplaced, and duplicated pages is saved in [`page_data_master.py`](https://github.com/GLAM-Workbench/anu-archives/blob/master/page_data_master.py). This data is combined with the holiday data to generate the complete page and date lists above.
-
+* Print and handwritten data extracted from the images using Amazon Textract have been saved in a [series of CSV files available from Cloudstor](https://cloudstor.aarnet.edu.au/plus/s/RwRrCpisBac7N38). There's one file per year, and each row in the CSV represents a single column row. This data is in the process of being checked and cleaned, and is likely to change. The easiest way to explore this data is through the [Datasette interface](https://sydney-stock-exchange-xqtkxtd5za-ts.a.run.app) which provides fulltext and structured searching.
 
 <!-- START RUN INFO -->
 
