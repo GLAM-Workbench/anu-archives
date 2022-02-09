@@ -1,6 +1,6 @@
 # ANU Archives
 
-Current version: [v1.1.0](https://github.com/GLAM-Workbench/anu-archives/releases/tag/v1.1.0)
+Current version: [v1.1.1](https://github.com/GLAM-Workbench/anu-archives/releases/tag/v1.1.1)
 
 This repository contains Jupyter notebooks that help you work with data from the ANU Archives. The notebooks currently focus on the [Sydney Stock exchange stock and share lists](http://archivescollection.anu.edu.au/index.php/or59j). As the content note indicates:
 
